@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  enableHttpMocks: false,
+  comingSoon: false,
+  endpoints: {
+    albums: "https://jsonplaceholder.typicode.com/albums",
+    todos: "https://jsonplaceholder.typicode.com/todos",
+    postId: "https://jsonplaceholder.typicode.com/comments?postId=1",
+  },
+  urls: {},
+  sessionConfig: {
+    length: 65,
+    warningAt: 45,
+  },
 };
 
 /*
@@ -14,3 +26,7 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+//note: endpoints would be like below, thats the reson proxy config has /api/*
+//forms: 'api/forms'
+//claimDetails: 'api/claim/:claimNumber
