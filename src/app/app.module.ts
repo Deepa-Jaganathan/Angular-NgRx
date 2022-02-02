@@ -11,9 +11,10 @@ import { UserService } from "./user.service";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
 import { HttpClientModule } from "@angular/common/http";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
-import { FooterModule } from "./components/footer/footer.module";
 import { HeaderModule } from "./components/header/header.module";
 import { UserTableModule } from "./components/user-table/user-table.module";
+import { RouterModule } from "@angular/router";
+import { ComponentsModule } from "./components/components.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,8 +23,9 @@ import { UserTableModule } from "./components/user-table/user-table.module";
     AppRoutingModule,
     HttpClientModule,
     HeaderModule,
-    FooterModule,
     UserTableModule,
+    RouterModule,
+    ComponentsModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([UserEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: "router" }),

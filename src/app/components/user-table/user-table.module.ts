@@ -10,7 +10,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 
 const routes: Routes = [
   {
-    path: "",
+    path: "user",
     component: UserTableComponent,
   },
 ];
