@@ -15,6 +15,7 @@ import { HeaderModule } from "./components/header/header.module";
 import { UserTableModule } from "./components/user-table/user-table.module";
 import { RouterModule } from "@angular/router";
 import { ComponentsModule } from "./components/components.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +27,8 @@ import { ComponentsModule } from "./components/components.module";
     UserTableModule,
     RouterModule,
     ComponentsModule,
+    FormsModule,
+    ReactiveFormsModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([UserEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: "router" }),
