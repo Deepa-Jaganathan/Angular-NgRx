@@ -1,1 +1,38 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h2 class="heading">Login Form</h2>
+  <div class="login-card">
+    <mat-card class="login-form"> 
+      <!--login form-->
+      <div class="form-login">
+        <!--username-->
+        <div>
+          <span>Please Enter your user name</span><br><br>
+          <mat-form-field appearance="outline" class="input-field">
+            <mat-label>User name</mat-label>
+            <input autofocus type="text" matInput placeholder="Username" formControlName="username">
+          </mat-form-field>
+        </div>
+         <!--password-->
+        <div>
+          <span>Please Enter your password</span><br><br>
+          <mat-form-field appearance="outline" class="input-field">
+            <mat-label>Password</mat-label>
+            <input type="password" autocomplete="false" matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+        </div>
+        <a href="#"> Forgot Password</a><br><br>
+        <!--Button-->
+        <div>
+          <div class="button">
+            <button class="submit-button" type="button" mat-raised-button color="primary" (click)="register()">Register</button>
+            <button class="submit-button" type="ngSubmit" mat-raised-button color="primary">Login</button>
+          </div>
+        </div>
+    
+      </div>
+    </mat-card>
+  </div>
+
+
+
+</form>
