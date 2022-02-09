@@ -34,8 +34,8 @@ export class AppComponent {
   ) {}
 
   ngOnInit() {
-    // this.store.dispatch(new getName());
-    // window.onresize = () => (this.isMobileLayout = window.innerWidth <= 991);
+    this.store.dispatch(new getName());
+    window.onresize = () => (this.isMobileLayout = window.innerWidth <= 991);
     // this.store
     //   .select(selectUserList)
     //   .subscribe((developers) => console.log(developers));
@@ -43,15 +43,16 @@ export class AppComponent {
     // this.userAlbum = this.album
     //   .getUserAlbums()
     //   .subscribe((data) => console.log(data));
+     
     // this.sess= this.sessionTime.remainingTime$;
     this.repo.getUserAlbums().pipe(
       map((data) => {
-        console.log(data);
+        // console.log(data);
       })
     );
 
     this.repo.getUserAlbums().subscribe((data) => {
-      console.log(data);
+      // console.log(data);
     });
     // console.log(this.user);
   }

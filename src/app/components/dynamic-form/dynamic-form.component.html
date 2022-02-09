@@ -1,0 +1,43 @@
+<!-- uncomment to use the hard coded data -->
+<!-- <div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+  
+      <div *ngFor="let formField of formFields" class="form-group">
+        <app-dynamic-form-input [input]="formField" [form]="form"></app-dynamic-form-input>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save</button>
+      </div>
+    </form>
+    {{form.status}}
+  
+    <div *ngIf="payLoad" class="form-group">
+      <strong>Here's the payload</strong><br>{{payLoad}}
+    </div>
+</div> -->
+
+  <!-- Using form data from http call -->
+  <h3 class="register-card">Register Form</h3>
+  <div *ngIf="formValid()" class="register-card">
+    <mat-card class="register-form"> 
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
+  
+        <div *ngFor="let formField of dynamicForm" class="form-group">
+          <app-dynamic-form-input [input]="formField" [form]="form"></app-dynamic-form-input>
+        </div>
+    
+        <div class="form-group">
+          <button class="submit-button" type="ngSubmit" mat-raised-button color="primary" [disabled]="form.invalid">Register</button>
+        </div>
+      </form>
+    
+      <!-- <div *ngIf="payLoad" class="form-group">
+        <strong>Here's the payload</strong><br>{{payLoad}}
+      </div> -->
+  
+    
+    </mat-card>
+  </div>
+
+
