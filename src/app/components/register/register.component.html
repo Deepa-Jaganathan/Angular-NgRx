@@ -1,1 +1,9 @@
-<p>register works!</p>
+<app-dynamic-form 
+[formFields]="formFields | async "
+[dynamicForm]="dynamicFormFields | async"></app-dynamic-form>
+
+<!-- <div *ngIf="dynamicFormFields">
+    {{dynamicFormFields | async }}
+    <app-dynamic-form [dynamicForm]="dynamicFormFields | async "></app-dynamic-form>
+</div> -->
+

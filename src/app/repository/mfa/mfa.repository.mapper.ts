@@ -16,8 +16,6 @@ export class MfaMapper extends Mapper<
       response.push({ userId: e.userId, title: e.title });
     });
 
-    console.log(response);
-
     return {
       userId: userEntity.map((e) => e.id),
       title: userEntity.map((e) => e.title),

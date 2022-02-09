@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,15 +33,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    BrowserAnimationsModule,
-        MatCheckboxModule,
+        CommonModule,
+        BrowserAnimationsModule,
         MatCheckboxModule,
         MatButtonModule,
         MatInputModule,
@@ -72,7 +72,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatSnackBarModule,
         MatTableModule,
         MatSortModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatNativeDateModule
   ],
   exports: [
     MatButtonModule,
@@ -90,10 +91,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatChipsModule,
     MatTooltipModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatNativeDateModule
 ],
 providers: [
   MatDatepickerModule,
 ]
 })
-export class ComponentsMaterialModule { }
+export class ComponentsMaterialModule {
+}
