@@ -15,6 +15,7 @@ export class DynamicFormInputComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.input)
   }
 
   get isValid() { return this.form.controls[this.input.key].valid; }

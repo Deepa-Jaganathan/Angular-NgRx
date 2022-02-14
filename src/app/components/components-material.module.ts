@@ -1,4 +1,4 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -96,7 +96,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 ],
 providers: [
   MatDatepickerModule,
-]
+],
+schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class ComponentsMaterialModule {
 }

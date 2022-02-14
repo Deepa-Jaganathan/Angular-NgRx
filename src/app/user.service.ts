@@ -12,6 +12,6 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get('/assets/user.json');
+    return this.http.get('/api/getState');
   }
 }

@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { AboutComponent } from "./about/about.component";
 import { ContactComponent } from "./contact/contact.component";
@@ -16,5 +16,6 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
   declarations: [HomeComponent, ContactComponent, AboutComponent, LoginComponent, RegisterComponent, DynamicFormInputComponent, DynamicFormComponent],
   imports: [CommonModule, ComponentsRoutingModule, ComponentsMaterialModule, FormsModule,
     ReactiveFormsModule, MatCardModule],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class ComponentsModule {}

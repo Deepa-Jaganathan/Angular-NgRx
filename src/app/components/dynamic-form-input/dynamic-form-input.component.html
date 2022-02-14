@@ -13,6 +13,7 @@
           <mat-form-field appearance="outline">
             <mat-label>{{input.label}}**</mat-label>
             <input type="text" matInput [placeholder]="input.label" [formControlName]="input.key">
+            <mat-error>{{input.error}}</mat-error>
           </mat-form-field>
         </div>
 
@@ -23,6 +24,7 @@
             <input matInput [matDatepicker]="picker" [formControlName]="input.key">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
+            <mat-error>{{input.error}}</mat-error>
           </mat-form-field>
         </div>
     
@@ -40,6 +42,7 @@
             <mat-select [id]="input.key" [formControlName]="input.key">
               <mat-option *ngFor="let opt of input.options" [value]="opt.key">{{opt.value}}</mat-option>
             </mat-select>
+            <mat-error>{{input.error}}</mat-error>
           </mat-form-field>
         </div>
 
@@ -52,11 +55,11 @@
         </div><br>
 
       <!--Material checkbox not working-->
-       <!-- <div *ngSwitchCase="'checkbox'">
+       <div *ngSwitchCase="'checkbox'">
           <section class="example-section" >
             <mat-checkbox [formControlName]="input.key" class="example-margin">{{input.label}}</mat-checkbox>
           </section>
-       </div> -->
+       </div>
 
 
 
@@ -70,8 +73,8 @@
 
         <!--Material Radio-->
         <div *ngSwitchCase="'radio'">
-          <span>Gender:</span><br>
-            <mat-radio-group *ngFor="let opt of input.options" [formControlName]="input.key" aria-label="Select an option">
+            <span>Gender:</span><br>
+            <mat-radio-group *ngFor="let opt of input.options"  [formControlName]="input.key" aria-label="Select an option">
               <mat-radio-button type="input.type" [value]="opt.value">{{opt.value}}</mat-radio-button><br>
             </mat-radio-group>
         </div>
