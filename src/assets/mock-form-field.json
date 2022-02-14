@@ -22,6 +22,7 @@
               "value": "Female"
            }
         ],
+        "error": "Please select gender",
         "required": true,
         "order": 6
      },
@@ -31,6 +32,7 @@
         "label": "I accept terms and services",
         "type": "checkbox",
         "required": true,
+        "error": "Please confirm terms and services",
         "order": 5
      },
      {
@@ -59,6 +61,7 @@
         "label": "Email",
         "type": "email",
         "required": true,
+        "error": "Email is required**",
         "validator": "email",
         "order": 2
      },
@@ -67,6 +70,7 @@
         "key": "name",
         "label": "Name",
         "required": true,
+        "error": "Name is required**",
         "order": 1
      },
      {
@@ -75,6 +79,7 @@
       "label": "Date of birth",
       "type": "date",
       "required": true,
+      "error": "DOB is required **",
       "order": 3
    }
 

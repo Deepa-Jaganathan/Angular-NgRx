@@ -7,6 +7,7 @@ export class FormFields<T> {
     order: number;
     controlType: string;
     type: string;
+    error: string;
     options: { key: string; value: string }[];
   
     constructor(
@@ -14,6 +15,7 @@ export class FormFields<T> {
         value?: T;
         key?: string;
         label?: string;
+        error?: string;
         required?: boolean;
         validator?: string;
         order?: number;
@@ -25,6 +27,7 @@ export class FormFields<T> {
       this.value = options.value;
       this.key = options.key || "";
       this.label = options.label || "";
+      this.error = options.error || "";
       this.required = !!options.required;
       this.validator = options.validator || "";
       this.order = options.order === undefined ? 1 : options.order;
