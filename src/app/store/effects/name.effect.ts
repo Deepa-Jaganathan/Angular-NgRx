@@ -15,7 +15,7 @@ export class UserEffects {
         @Effect()
         getUser$ = this._actions$.pipe(
           ofType<getName>(LOAD_USER_NAME),
-          switchMap(() => this.userService.getUsers()),
+          switchMap(() => this.userService.getStates()),
           switchMap((config: UserName[]) => {
             return of(new successName(config));
           })
