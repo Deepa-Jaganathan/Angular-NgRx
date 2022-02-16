@@ -1,5 +1,5 @@
 {
-    "/api123/*": {
+    "/api/*": {
         "target": "https://node-api-point.herokuapp.com",
         "secure": false,
         "changeOrigin": true,

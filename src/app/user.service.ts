@@ -13,7 +13,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getStates(): Observable<any> {
-    // return this.http.get('api/states/getState');
-    return this.http.get('https://node-api-point.herokuapp.com/states/getState');
+    return this.http.get('api/states/getState');
+    // return this.http.get('https://node-api-point.herokuapp.com/states/getState');
   }
 }
