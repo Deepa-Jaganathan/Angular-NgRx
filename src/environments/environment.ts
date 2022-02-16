@@ -10,6 +10,7 @@ export const environment = {
     albums: "https://jsonplaceholder.typicode.com/albums",
     todos: "https://jsonplaceholder.typicode.com/todos",
     postId: "https://jsonplaceholder.typicode.com/comments?postId=1",
+    nodeApi: 'https://node-api-point.herokuapp.com'
   },
   urls: {},
   sessionConfig: {

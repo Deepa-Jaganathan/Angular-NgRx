@@ -5,6 +5,7 @@ export const environment = {
   endpoints: {
     albums: 'https://jsonplaceholder.typicode.com/albums',
     todos: 'https://jsonplaceholder.typicode.com/todos',
+    nodeApi: 'https://node-api-point.herokuapp.com'
   },
   urls: {
 

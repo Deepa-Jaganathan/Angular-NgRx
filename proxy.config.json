@@ -1,10 +1,11 @@
 {
-    "/api/*": {
+    "/api123/*": {
         "target": "https://node-api-point.herokuapp.com",
         "secure": false,
         "changeOrigin": true,
+        "logLevel": "debug",
         "pathRewrite": {
-           "^/api": ""
-        }
+            "^/api": ""
+         }
     }
 }
